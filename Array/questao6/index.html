@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="chamadaAdicionado(event)">
+        <input type="text" class="nome" placeholder="nome">
+        <input type="text" class="email" placeholder="email">
+        <input type="text" class="idade" placeholder="idade">
+
+        <button type="submit">adicionar</button>
+    </form>
+
+    <form onsubmit="chamadaBuscando(event)">
+        <input type="text" class="emailBusca" placeholder="email">
+
+        <button type="submit">buscar</button>
+    </form>
+    <button onclick="exibirLista()">exibir</button>
+    <div id="exibirLista"></div>
+    <div id="exibir"></div>
+    
+
+</body>
+<script src="main.js"></script>
+</html>

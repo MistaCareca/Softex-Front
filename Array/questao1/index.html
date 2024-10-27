@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <form onsubmit="chamaAdicionarTarefa(event)">
+        <input type="text" class="tarefa" placeholder="Insira uma tarefa">
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <button onclick="removerPrimeiraTarefa(event)">Remover Primeiro</button>
+    <button onclick="removerUltimaTarefa(event)">Remover Último</button>
+
+    <div id="exibir"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
