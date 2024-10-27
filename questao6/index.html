@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao_6</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Escolha do Usuário</th>
+                <th>Operação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>100</td>
+                <td>Cachorro Quente</td>
+                <td>R$ 1.70</td>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Bauru Simples</td>
+                <td>R$ 2.30</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Bauru com Ovo</td>
+                <td>R$ 2.60</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Hamburger</td>
+                <td>R$ 2.40</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>Cheeseburger</td>
+                <td>R$ 2.50</td>
+            </tr>
+            <tr>
+                <td>105</td>
+                <td>Refrigerante</td>
+                <td>R$ 1.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form onsubmit="fazerPedido(event)">
+        <input type="number" class="codigo" placeholder="Codigo" min="100" max="105" required>
+        <input type="number" class="quantidade" placeholder="Quantidade">
+        <button type="submit">Pedir</button>
+    </form>
+
+    <div id="resultado"></div>
+    <div id="conta"></div>
+</body>
+<script src="main.js"></script>
+</html>

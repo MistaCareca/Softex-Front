@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao_3</title>
+</head>
+<body>
+    <form onsubmit="pesoIdeal(event)">
+        <input type="number" placeholder="Altura" class="altura" step="0.01" min="0.5" required>
+        <select class="sexo" required>
+            <option value="">Selecione o sexo</option>
+            <option value="1">Masculino</option>
+            <option value="2">Feminino</option>
+        </select>
+        <button type="submit">enviar</button>
+    </form>
+    <div id="resultado"></div>
+</body>
+    <script src="main.js"></script>
+</html>

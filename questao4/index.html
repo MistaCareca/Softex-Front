@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao_4</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>classificacão</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Alimento não-perecivel</td>
+            </tr>
+            <tr>
+                <td>2,3 ou 4</td>
+                <td>Alimento perecivel</td>
+            </tr>
+            <tr>
+                <td>5 ou 6</td>
+                <td>Vestúario</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Higiene Pessoal</td>
+            </tr>
+            <tr>
+                <td>8 até 15</td>
+                <td>Limpeza e Utensílios Domésticos</td>
+            </tr>
+            <tr>
+                <td>Qualquer outro código</td>
+                <td>Código inválido</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <form onsubmit="classificacao(event)">
+        <input type="number" placeholder="Informe um código" class="id">
+        <button type="submit">Enviar</button>
+    </form>
+    <div id="resultado"></div>
+</body>
+<script src="main.js"></script>
+</html>
