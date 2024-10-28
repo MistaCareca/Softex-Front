@@ -27,6 +27,64 @@ adicionarUsuario(novoUsuario);
 modificarUsuario(2, { nome: "João Silva", idade: 46 });
 console.log("Usuários atualizados:");
 usuarios.forEach(mostrarUsuario);
+// Classe abstrata Veiculo
+class Veiculo {
+    constructor(marca, modelo, ano) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+    }
+}
+class Carro extends Veiculo {
+    constructor(marca, modelo, ano, numeroPortas) {
+        super(marca, modelo, ano);
+        this.numeroPortas = numeroPortas;
+    }
+    mostrarInformacoes() {
+        console.log(`Carro: ${this.marca} ${this.modelo}, Ano: ${this.ano}, Portas: ${this.numeroPortas}`);
+    }
+    calcularConsumoCombustivel(distancia, litros) {
+        return distancia / litros;
+    }
+}
+class Moto extends Veiculo {
+    constructor(marca, modelo, ano, cilindradas) {
+        super(marca, modelo, ano);
+        this.cilindradas = cilindradas;
+    }
+    mostrarInformacoes() {
+        console.log(`Moto: ${this.marca} ${this.modelo}, Ano: ${this.ano}, Cilindradas: ${this.cilindradas}cc`);
+    }
+    calcularConsumoCombustivel(distancia, litros) {
+        return distancia / litros;
+    }
+}
+class Caminhao extends Veiculo {
+    constructor(marca, modelo, ano, capacidadeCarga) {
+        super(marca, modelo, ano);
+        this.capacidadeCarga = capacidadeCarga;
+    }
+    mostrarInformacoes() {
+        console.log(`Caminhão: ${this.marca} ${this.modelo}, Ano: ${this.ano}, Carga: ${this.capacidadeCarga} toneladas`);
+    }
+    calcularConsumoCombustivel(distancia, litros) {
+        return distancia / (litros * 1.5);
+    }
+}
+function mostrarVeiculos(veiculos) {
+    veiculos.forEach((veiculo) => veiculo.mostrarInformacoes());
+}
+const veiculos = [];
+veiculos.push(new Carro("Toyota", "Corolla", 2020, 4));
+veiculos.push(new Moto("Yamaha", "MT-07", 2019, 700));
+veiculos.push(new Caminhao("Volvo", "FH", 2018, 18));
+console.log("Veículos registrados:");
+mostrarVeiculos(veiculos);
+console.log("\nConsumo de combustível:");
+veiculos.forEach((veiculo) => {
+    const consumo = veiculo.calcularConsumoCombustivel(500, 40);
+    console.log(`Consumo de ${veiculo.marca} ${veiculo.modelo}: ${consumo.toFixed(2)} km/L`);
+});
 class Produto {
     constructor(nome, preco) {
         this.nome = nome;
