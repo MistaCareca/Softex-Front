@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "target": "es6",                
+      "outFile": "classes/questao1/questao1/script.js",        
+      "strict": true,                  
+      "esModuleInterop": true
+    }
+  }
+  
